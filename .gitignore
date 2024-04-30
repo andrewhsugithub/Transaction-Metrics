@@ -1,0 +1,10 @@
+﻿venv/
+
+*.pdf
+*.docx
+*.txt
+
+.env
+
+*.pyc
+**/**__pycache__
