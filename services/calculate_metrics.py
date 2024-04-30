@@ -1,10 +1,4 @@
-﻿# def test(data):
-#     for transaction in data:
-#         if float(transaction['fillPnl']) !=0 and transaction['side']=="buy":
-#             print(transaction)
-
-# https://crypto.com/university/how-to-calculate-roi-for-crypto#:~:text=Calculating%20ROI%20for%20crypto%20assets,value%2C%20and%20multiplying%20by%20100.
-def roi(data, initial_investment=8000):
+﻿def roi(data, initial_investment=8000):
     total_profit = 0.0
     
     for transaction in data:
@@ -13,7 +7,6 @@ def roi(data, initial_investment=8000):
         
     return f'{total_profit/initial_investment*100:.2f}%'
 
-# https://www.sightfull.com/glossary/opportunity-win-rate/
 def win_rate(data):
     wins = 0
     losses = 0
@@ -26,7 +19,6 @@ def win_rate(data):
             
     return f'{wins/(wins+losses)*100:.2f}%'
 
-# https://www.investopedia.com/terms/w/win-loss-ratio.asp
 def odds_ratio(data):
     wins = 0
     losses = 0
@@ -39,8 +31,6 @@ def odds_ratio(data):
             
     return f'{wins/losses:.2f}'
 
-# https://www.stockfeel.com.tw/%E6%9C%80%E5%A4%A7%E5%9B%9E%E6%92%A4-max-drawdown-%E7%AD%96%E7%95%A5%E7%AE%A1%E7%90%86/
-# https://www.investopedia.com/terms/m/maximum-drawdown-mdd.asp
 def max_drawdown(data):
     cumulative_profit = 0.0
     peak = -float('inf')
@@ -54,7 +44,6 @@ def max_drawdown(data):
         
     return f'{max_drawdown:.2f}%'
 
-# https://www.instatrade.com/blog/16-profit-factor#:~:text=The%20profit%20factor%20is%20calculated,earned%20two%20dollars%20in%20profit.
 def profit_factor(data):
     total_profit = 0.0
     total_loss = 0.0
@@ -67,7 +56,6 @@ def profit_factor(data):
             
     return f'{total_profit/abs(total_loss):.2f}'
 
-# https://gocardless.com/guides/posts/sharpe-ratio/
 def sharpe_ratio(data, initial_investment=8000):
     risk_free_rate = 1.21  # January 31st 2024 https://tradingeconomics.com/taiwan/government-bond-yield
     prev = initial_investment

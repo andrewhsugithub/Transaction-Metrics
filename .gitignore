@@ -2,7 +2,7 @@
 
 *.pdf
 *.docx
-*.txt
+a.txt
 
 .env
 
