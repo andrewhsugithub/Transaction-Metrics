@@ -8,7 +8,7 @@ ROI, Win Rate, MDD(maximum drawdown), Profit Factor, Sharpe Ratio
 Turn on your local server:
 
 ```
-pip install -r requirments.txt
+pip install -r requirements.txt
 python main.py
 ```
 
